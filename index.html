@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Gumulan, Kecamatan Kesamben, Kabupaten Jombang</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-area">
+                <div class="title-area">
+                    <span class="desa-title">DESA GUMULAN</span>
+                    <span class="kec-title">KEC. KESAMBEN</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <!-- PANDUAN NAVIGASI: Ganti isi href="..." jika ingin mengarahkan menu ke halaman atau link lain -->
+                <a href="index.html">BERANDA</a>
+                <a href="profildesa.html">PROFIL DESA <span>&#711;</span></a>
+                <a href="index.html#berita-desa">ARTIKEL</a>
+                <a href="index.html#kesan-kkn">KESAN KKN</a>
+                <a href="index.html#bagian-kontak">KONTAK</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+    <div class="slider-container">
+        <!-- PANDUAN FOTO SLIDER: Ganti tulisan landscape1.jpeg, dst dengan nama file foto asli desa. Pastikan foto sudah ditaruh di folder yang sama -->
+        <img src="landscape1.jpeg" alt="Pemandangan Desa Gumulan 1">
+        <img src="landscape2.jpeg" alt="Pemandangan Desa Gumulan 2">
+        <img src="landscape3.jpeg" alt="Pemandangan Desa Gumulan 3">
+        <img src="landscape4.jpeg" alt="Pemandangan Desa Gumulan 4">
+        <img src="landscape5.jpeg" alt="Pemandangan Desa Gumulan 5">
+        <img src="landscape6.jpeg" alt="Pemandangan Desa Gumulan 6">
+    </div>
+    <div class="hero-teks">
+        <h1>Selamat Datang di Desa Gumulan</h1>
+        <p>Mewujudkan Desa yang Maju, Mandiri, dan Sejahtera.</p>
+    </div>
+</section>
+
+        <section class="layanan-cepat">
+            <h2>Layanan Desa</h2>
+            <div class="grid-layanan">
+                <!-- PANDUAN LAYANAN 1: Ganti href="..." dengan link Google Form atau WhatsApp desa. Ganti teks di dalam <span> dengan nama layanannya -->
+                <a href="surat-pengantar.html" class="item-layanan">
+                    <div class="ikon">📄</div>
+                    <span>Surat Pengantar</span>
+                </a>
+                <!-- PANDUAN LAYANAN 2 -->
+                <a href="data-kependudukan.html" class="item-layanan">
+                    <div class="ikon">👥</div>
+                    <span>Data Kependudukan</span>
+                </a>
+                <!-- PANDUAN LAYANAN 3 -->
+                <a href="pengumuman.html" class="item-layanan">
+                    <div class="ikon">📢</div>
+                    <span>Pengumuman</span>
+                </a>
+                <!-- PANDUAN LAYANAN 4 -->
+                <a href="transparansi.html" class="item-layanan">
+                    <div class="ikon">💰</div>
+                    <span>Transparansi Dana</span>
+                </a>
+            </div>
+        </section>
+
+       <section class="infografis-area">
+            <h2>Infografis Kependudukan</h2>
+                <div class="kartu-statistik">
+                <!-- PANDUAN ANGKA STATISTIK: Cukup ubah angka di dalam tag <p> di bawah ini sesuai dengan data warga terbaru -->
+                <div class="kartu">
+                    <h3>Total Penduduk</h3>
+                     <p>2.644 Jiwa</p>
+                 </div>
+                <div class="kartu">
+                    <h3>Laki-laki</h3>
+                     <p>1.303 Jiwa</p>
+                 </div>
+                 <div class="kartu">
+                    <h3>Perempuan</h3>
+                    <p>1.341 Jiwa</p>
+                </div>
+            </div>
+    
+    <div class="grafik-wrapper">
+        <div class="grafik-item">
+            <h3>Berdasarkan Jenis Kelamin</h3>
+            <canvas id="grafikPenduduk"></canvas>
+        </div>
+        <div class="grafik-item">
+            <h3>Berdasarkan Kelompok Umur</h3>
+            <canvas id="grafikUmur"></canvas>
+        </div>
+    </div>
+</section>
+
+        <section class="berita-desa">
+    <h2>Berita Terbaru</h2>
+    <p style="margin-bottom: 30px; color: #666; font-size: 14px;">Kumpulan berita dan liputan kegiatan mahasiswa KKNT Inovasi IPB di Desa Gumulan.</p>
+    <div class="grid-berita">
+        <div class="kartu-berita">
+            <!-- PANDUAN BERITA 1: Ganti src gambar, teks judul <h3>, dan cuplikan paragraf <p> sesuai dengan berita yang baru -->
+            <img src="foto-berita1.jpeg" alt="Kegiatan SAPA Gumulan" class="gambar-berita">
+            <div class="isi-berita">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">SAPA Gumulan: Kenalkan Sains melalui Eksperimen Kreatif bagi Siswa SD</h3>
+                <p>Belajar sains tidak selalu harus dengan membaca buku. Mahasiswa KKN menghadirkan Program SAPA Gumulan untuk mengajak anak-anak bereksperimen langsung...</p>
+                
+                <!-- PANDUAN LINK BERITA EKSTERNAL: Jika ingin menautkan berita dari website luar (misal portal berita daerah), ganti href="berita-sapa.html" dengan link lengkap (contoh: href="https://beritadesa.com/berita-1"). Tambahkan juga atribut target="_blank" setelah tulisan class="link-baca" agar web terbuka di tab baru tanpa menutup halaman desa ini. -->
+                <a href="berita-sapa.html" class="link-baca">Baca selengkapnya ↗</a>
+            </div>
+        </div>
+        <div class="kartu-berita">
+            <!-- PANDUAN BERITA 2: Lakukan hal yang sama seperti berita 1 jika ada pembaruan -->
+            <img src="foto-berita2.jpeg" alt="Kegiatan Gumulan ReSoil" class="gambar-berita">
+            <div class="isi-berita">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Gumulan ReSoil: Ajak Petani Desa Manfaatkan Limbah Organik untuk POC</h3>
+                <p>Menjaga kualitas lahan sangat penting agar tanah tetap produktif. Mahasiswa KKNT Inovasi IPB memberikan edukasi pemanfaatan bahan organik...</p>
+                
+                <!-- PANDUAN LINK BERITA EKSTERNAL: Lakukan hal yang sama seperti di atas jika ingin menggunakan link luar -->
+                <a href="berita-resoil.html" class="link-baca">Baca selengkapnya ↗</a>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="kesan-kkn" class="kesan-pesan">
+            <h2>Kesan & Pesan Mahasiswa KKN</h2>
+            <div class="grid-review">
+                <!-- PANDUAN KESAN PESAN: Ganti teks kutipan di dalam tag <p> dan ubah nama pembuat pesan di dalam tag <h4> -->
+                <div class="kartu-review">
+                    <p>"Desa Gumulan punya potensi yang luar biasa. Warganya sangat ramah dan perangkat desanya sangat suportif ngebantu kelancaran proker kami dari awal sampai akhir!"</p>
+                    <h4>- Zaki, Tim KKN IPB 2026</h4>
+                </div>
+                <div class="kartu-review">
+                    <p>"Pengalaman yang gak bakal terlupakan bisa belajar bareng masyarakat di sini. Semoga website percontohan ini bisa jadi awal digitalisasi yang mantap buat desa."</p>
+                    <h4>- Teman KKN Zaki</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="bagian-kontak">
+    <div class="footer-konten">
+        <!-- PANDUAN INFO KONTAK: Silakan ubah alamat, email, dan nomor telepon desa pada teks di bawah ini -->
+        <div class="footer-info">
+            <h3>Pemerintah Desa Gumulan</h3>
+            <p>Jl. Raya Desa Gumulan No.01, RT.003/RW.003<br>
+            Kecamatan Kesamben, Kabupaten Jombang</p>
+        </div>
+        <div class="footer-kontak">
+            <h3>Hubungi Kami</h3>
+            <p>Email: desa.gumulan@gmail.com</p>
+            <p>Telepon: - (Belum Tersedia)</p>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <p>&copy; 2026 Pemerintah Desa Gumulan. Prototipe Web Mandiri oleh kelompok KKNT Inovasi IPB.</p>
+    </div>
+</footer>
+
+    <script>
+    // Chart Jenis Kelamin
+    const ctxJK = document.getElementById('grafikPenduduk');
+    new Chart(ctxJK, {
+        type: 'pie',
+        data: {
+            labels: ['Laki-laki', 'Perempuan'],
+            datasets: [{
+                // PANDUAN DATA GRAFIK PIE: Ubah angka di dalam kurung siku secara berurutan [Jumlah Laki-laki, Jumlah Perempuan]
+                data: [1303, 1341],
+                backgroundColor: ['#3b82f6', '#ec4899']
+            }]
+        }
+    });
+
+    // Chart Umur (Bar Chart)
+    const ctxUmur = document.getElementById('grafikUmur');
+    new Chart(ctxUmur, {
+        type: 'bar',
+        data: {
+            labels: ['<5', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-65', '>65'],
+            datasets: [{
+                label: 'Jumlah Penduduk',
+                // PANDUAN DATA GRAFIK BAR: Ubah deretan angka di bawah ini berurutan sesuai dengan kelompok umur dari balita hingga lansia
+                data: [0, 3, 167, 208, 213, 184, 186, 196, 222, 212, 215, 186, 156, 481],
+                backgroundColor: '#1abc9c'
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+/* PANDUAN UMUM: Font dan Warna Latar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* PANDUAN FONT: Ganti 'Poppins' dengan nama font lain dari Google Fonts jika ingin mengubah gaya tulisan */
+    font-family: 'Poppins', sans-serif;
+    /* PANDUAN WARNA: Ganti kode #f4f4f4 jika ingin warna latar belakang web yang lebih terang/gelap */
+    background-color: #f4f4f4;
+}
+
+/* Header & Navigasi */
+.top-bar {
+    background-color: #e6e6e6;
+    text-align: right;
+    padding: 8px 30px;
+    font-size: 12px;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+.main-nav {
+    /* PANDUAN WARNA HEADER: Ganti #3b4248 jika ingin mengubah warna dasar navigasi atas */
+    background-color: #3b4248;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.desa-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.kec-title {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Hero Banner & Slider Gambar */
+.hero-banner {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; /* Karena ada 3 gambar */
+    height: 100%;
+    display: flex;
+    /* PANDUAN ANIMASI: Ganti angka 15s untuk mempercepat atau memperlambat durasi geser foto */
+    animation: gulirBanner 15s infinite;
+    z-index: 1;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-teks {
+    position: relative;
+    z-index: 2;
+    /* PANDUAN EFEK GELAP: Angka 0.5 di bawah adalah tingkat kegelapan kotak teks, bisa diubah dari 0.1 sampai 0.9 */
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 30px 50px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.hero-teks h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Animasi Geser Gambar */
+@keyframes gulirBanner {
+    0%, 25% { transform: translateX(0); }
+    33%, 58% { transform: translateX(-33.33%); }
+    66%, 91% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}
+
+/* Bagian Umum Seksi Content */
+.layanan-cepat, .infografis-area, .berita-desa {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    /* PANDUAN WARNA JUDUL: Ganti #3b4248 jika ingin warna subjudul di seluruh web berbeda */
+    color: #3b4248;
+    margin-bottom: 30px;
+}
+
+/* Layanan Cepat */
+.grid-layanan {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.item-layanan {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    width: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-layanan:hover {
+    transform: translateY(-5px);
+}
+
+.ikon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Infografis */
+.kartu-statistik {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.kartu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    /* PANDUAN KARTU STATISTIK: Ganti #727272 jika ingin mengubah warna garis atas pada kartu jumlah penduduk */
+    border-top: 4px solid #727272;
+}
+
+.kartu h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.kartu p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b4248;
+}
+
+.grafik-container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Berita Desa */
+.grid-berita {
+    display: flex;
+    gap: 20px;
+}
+
+.kartu-berita {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    text-align: left;
+}
+
+.gambar-berita {
+    background-color: #ddd;
+    height: 150px;
+    width: 100%;
+}
+
+.isi-berita {
+    padding: 20px;
+}
+
+.isi-berita h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.isi-berita p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.isi-berita a {
+    text-decoration: none;
+    /* PANDUAN LINK BERITA: Ganti #3b82f6 jika ingin mengubah warna biru pada link "Baca selengkapnya" */
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* Penyesuaian Link Layanan Cepat */
+a.item-layanan {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Bagian Kesan Pesan KKN */
+.kesan-pesan {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-review {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.kartu-review {
+    background: #e8f6f3;
+    /* PANDUAN KARTU KESAN: Ganti #1abc9c dengan warna lain jika ingin mengubah garis aksen sebelah kiri */
+    border-left: 5px solid #1abc9c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    text-align: left;
+    font-style: italic;
+}
+
+.kartu-review p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.kartu-review h4 {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Footer Baru */
+footer {
+    /* PANDUAN WARNA FOOTER: Ganti #3b4248 jika ingin warna area paling bawah (footer) berbeda */
+    background-color: #3b4248;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-konten {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 30px;
+}
+
+.footer-info h3, .footer-kontak h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1abc9c;
+}
+
+.footer-info p, .footer-kontak p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Style Tambahan buat Halaman Dalam */
+/* Layout Halaman Profil Desa */
+/* Style Pembungkus Halaman Dalam */
+.page-header {
+    background-color: #555;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 36px;
+}
+
+.halaman-konten {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+.profil-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profil-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    /* PANDUAN PROFIL DESA: Ganti #3b82f6 jika ingin mengubah warna biru pada garis kiri di kotak-kotak halaman profil */
+    border-left: 5px solid #3b82f6;
+}
+
+.profil-card h2 {
+    color: #3b4248;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.profil-card p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Styling Tabel Batas Wilayah */
+.tabel-batas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+.tabel-batas td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.tabel-batas tr td:first-child {
+    font-weight: 600;
+    /* PANDUAN WARNA TABEL: Ganti #f8fafc jika ingin warna latar kolom kiri pada tabel berbeda */
+    background-color: #f8fafc;
+    width: 35%;
+    color: #3b4248;
+}
+
+.tabel-batas tr:hover td {
+    /* PANDUAN EFEK TABEL: Ganti #f1f5f9 jika ingin efek warna saat tabel disentuh kursor berubah */
+    background-color: #f1f5f9;
+    transition: 0.2s ease;
+}
+
+/* Layout Dua Grafik */
+.grafik-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.grafik-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+}
+
+.grafik-item h3 {
+    font-size: 16px;
+    color: #3b4248;
+    margin-bottom: 15px;
+}
+
+/* Styling Tabel Batas Wilayah */
+.tabel-batas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+.tabel-batas td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.tabel-batas tr td:first-child {
+    font-weight: 600;
+    background-color: #f8fafc;
+    width: 35%;
+    color: #3b4248;
+}
+
+.tabel-batas tr:hover td {
+    background-color: #f1f5f9;
+    transition: 0.2s ease;
+}
+
+/* Tambahan buat subjudul di dalam artikel */
+.isi-artikel h3 {
+    color: #3b4248;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 8px;
+}
+
+/* Layout Halaman Berita Lengkap */
+.artikel-lengkap {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.artikel-lengkap h1 {
+    color: #3b4248;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.meta-berita {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.foto-artikel-utama {
+    width: 100%;
+    /* PANDUAN GAMBAR BERITA UTAMA: Ubah 450px jika ingin tinggi gambar di dalam berita lebih besar/kecil */
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.isi-artikel p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.tombol-kembali {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    /* PANDUAN TOMBOL KEMBALI: Ganti #3b82f6 jika ingin mengubah warna dasar tombol "Kembali ke Beranda" */
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.tombol-kembali:hover {
+    /* PANDUAN EFEK TOMBOL: Ganti #1d4ed8 jika ingin warna efek sentuh tombol berbeda */
+    background-color: #1d4ed8;
+}
+
+.isi-artikel h3 {
+    color: #3b4248;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 8px;
+}
